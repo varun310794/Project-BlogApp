@@ -1,0 +1,13 @@
+<% include partials/header.ejs %>
+    </br>
+    <div class="ui inverted main text container segment">
+        <div class="ui huge header"><%=foundBlog.name%></div>
+        <img class="ui centered rounded image" src="<%= foundBlog.image %>">
+        <div class=""><p>This Blog Post Was Posted On <%= foundBlog.created.toDateString() %></p></div></br>
+        <p><%= foundBlog.body %></p>
+        <a href="blogs/<%=foundBlog._id%>/edit" class="ui white button">Edit</a>
+        <form id="delete" action="/blogs/<%=foundBlog._id%>?_method=delete" method="post">
+            <button class="ui white button">Delete</button>
+        </form>
+    </div>
+<% include partials/footer.ejs %>

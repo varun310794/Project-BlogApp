@@ -1,0 +1,29 @@
+<% include partials/header.ejs %>
+</br></br>
+
+    <div class="ui container">
+        <div class="ui inverted segment">
+           <div class="ui inverted form">
+             
+                <h3>Edit <%= foundBlog.name %></h1>
+                <form action="/blogs/<%=foundBlog._id%>?_method=put" method="post">
+                    <div class="field">
+                        <label>Blog's Title</label>
+                        <input placeholder="Enter The Blog Post's Title" name="title" type="text" value="<%= foundBlog.name %>">
+                    </div>
+                    <div class="field">
+                        <label>Image URL</label>
+                        <input placeholder=" Enter The Image URL" name="image" type="text" value="<%= foundBlog.image %>">
+                    </div>
+                    <div class="field">
+                        <label>Text</label>
+                        <textarea placeholder="Type in your Blog's Text here" name="description"><%= foundBlog.body %></textarea>
+                    </div>    
+                    <input type="submit" class="ui submit button">
+                </form>
+             
+            </div>
+        </div>
+    </div>
+
+<% include partials/footer.ejs %>

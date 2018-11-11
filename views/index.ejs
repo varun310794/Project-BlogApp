@@ -1,0 +1,12 @@
+<% include partials/header.ejs %>
+<% for(var i=0; i<allBlogs.length; i++){ %>
+    <h1><%= allBlogs[i].name %></h1></br>
+    <img src="<%= allBlogs[i].image %>"></br>
+    <% if(allBlogs[i].body && allBlogs[i].body.length > 0) { %>
+    <p><%= allBlogs[i].body.substring(0, 100)%></p>
+    <% } %>   
+    <a href="/blogs/<%= allBlogs[i]._id %>" class="ui mini button">Read More</a>
+    <p>This Blog Post Was Posted on <%= allBlogs[i].created.toDateString() %></p>
+    
+<% } %>
+<% include partials/footer.ejs %>

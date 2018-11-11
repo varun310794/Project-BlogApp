@@ -1,0 +1,29 @@
+<% include partials/header.ejs %>
+</br></br>
+
+    <div class="ui container">
+        <div class="ui inverted segment">
+           <div class="ui inverted form">
+             
+                <h3>New Blog</h1>
+                <form action="/blogs" method="post">
+                    <div class="field">
+                        <label>Blog's Title</label>
+                        <input placeholder="Enter The Blog Post's Title" name="title" type="text">
+                    </div>
+                    <div class="field">
+                        <label>Image URL</label>
+                        <input placeholder=" Enter The Image URL" name="image" type="text">
+                    </div>
+                    <div class="field">
+                        <label>Text</label>
+                        <textarea placeholder="Type in your Blog's Text here" name="description"></textarea>
+                    </div>    
+                    <input type="submit" class="ui submit button">
+                </form>
+             
+            </div>
+        </div>
+    </div>
+
+<% include partials/footer.ejs %>
