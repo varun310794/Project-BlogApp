@@ -4,7 +4,9 @@ var bodyParser=require("body-parser");
 var mongoose=require("mongoose");
 var methodOverride=require("method-override");
 //App Config----------------------------------------------------------
-mongoose.connect('mongodb://localhost:27017/blogPost', { useNewUrlParser: true });
+mongoose.connect('mongodb://varun:database1@ds145981.mlab.com:45981/blogapp');
+
+//mongoose.connect('mongodb://localhost:27017/blogPost', { useNewUrlParser: true });
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride("_method"))
